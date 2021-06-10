@@ -1,0 +1,41 @@
+@use "sass:math";
+
+// breakpoint
+$breakSP: 768;
+$breakPC: 950;
+$breakpoints: (
+  'u-sp': 'print, screen and (max-width: #{$breakSP}px)',
+  'o-sp': 'print, screen and (min-width: #{$breakSP + 1}px)',
+  'sp-pc':
+    'print, screen and (max-width: #{$breakPC}px) and (min-width: #{$breakSP + 1}px)',
+  'o-pc': 'print, screen and (min-width: #{$breakPC + 1}px)',
+) !default;
+@mixin mq($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// ie用
+@mixin ie {
+  @media all and (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
+// PATH
+$bgPath: '/assets/images/';
+
+// COLOR
+$colorLight: #3cabe0;
+$colorNormal: #2496cd;
+$colorDark: #012c45;
+$colorBlack: #222;
+$colorGray: #666;
+$colorWhite: #fff;
+
+// mixin
+@mixin fontSize($size) {
+  font-size: #{$size}px;
+  font-size: #{math.div($size, 10)}rem;
+}

@@ -1,0 +1,11 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        // import, export構文が別の構文に変換されてしまうらしい（？）。Tree Shakingにも対応
+        "modules": false
+      }
+    ]
+  ]
+}

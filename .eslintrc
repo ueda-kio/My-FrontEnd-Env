@@ -1,0 +1,25 @@
+{
+  "extends": ["eslint:recommended"],
+  "plugins": [],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "globals": {
+    "$": true
+  },
+  "rules": {
+    "no-console": "off",
+    "no-var": 2,
+    "prefer-const": 2,
+    "prefer-template": 2,
+    "prefer-spread": 2,
+    "prefer-arrow-callback": 2,
+    "no-constant-condition": 2,
+    "no-dupe-args": 2
+  }
+}
